@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ros:
+    build: .
+    network_mode: "host"
+    container_name: ros
+    volumes: 
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${HOME}/Documents/programming/dotfiles:/root/dotfiles:rw
+      - ${HOME}/Documents/roahmlab:/root/roahmlab:rw
+    command: sleep 5d
